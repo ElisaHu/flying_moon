@@ -3,11 +3,13 @@ package model;
 import java.awt.*;
 
 public class Character {
+
+    // replace to character image
     public static final int SIZE_X = 15;
     public static final int SIZE_Y = 8;
-    public static final int DX = 2;
-    public static final int Y_POS = Game.HEIGHT - 40;
     public static final Color COLOR = new Color(250, 128, 20);
+
+    public static final int DX = 2;
 
     private int direction;
     private int x;
@@ -62,6 +64,7 @@ public class Character {
             x = 0;
         else if (x > Game.WIDTH)
             x = Game.WIDTH;
+
     }
 
 
