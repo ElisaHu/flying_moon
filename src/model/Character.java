@@ -27,20 +27,24 @@ public class Character {
         return x;
     }
 
+    public void setX(int new_x) {
+        this.x = new_x;
+    }
+
     public int getY() {
         return y;
     }
 
-    // Faces tank to the right
+    // Faces character to the right
     // modifies: this
-    // effects: tank is facing right
+    // effects: character is facing right
     public void faceRight() {
         direction = 1;
     }
 
-    // Faces tank to the left
+    // Faces character to the left
     // modifies: this
-    // effects: tank is facing left
+    // effects: character is facing left
     public void faceLeft() {
         direction = -1;
     }
@@ -52,13 +56,12 @@ public class Character {
     public void move() {
         x = x + direction * DX;
         y = y + direction * DX;
-
         handleBoundary();
     }
 
-    // Constrains tank so that it doesn't travel of sides of screen
+    // Constrains character so that it doesn't travel of sides of screen
     // modifies: this
-    // effects: tank is constrained to remain within vertical boundaries of game
+    // effects: character is constrained to remain within vertical boundaries of game
     private void handleBoundary() {
         if (x < 0)
             x = 0;
