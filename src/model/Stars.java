@@ -7,7 +7,8 @@ public class Stars {
 
     public static final int SIZE_X = 15;
     public static final int SIZE_Y = 9;
-    public static final Color COLOR = new Color(10, 50, 188);
+    //todo: star shape
+    public static final Color COLOR = new Color(241, 241, 27);
 
     public static final int DY = 1;
 
