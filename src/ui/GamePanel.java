@@ -35,9 +35,9 @@ public class GamePanel extends JPanel{
 
         drawGame(g);
 
-//        if (game.isOver()) {
-//            gameOver(g);
-//        }
+        if (game.isOver()) {
+            gameOver(g);
+        }
     }
 
     // Draws the game
@@ -72,12 +72,32 @@ public class GamePanel extends JPanel{
     // Draw an invader
     // modifies: g
     // effects:  draws the invader i onto g
-    // TODO: CHANGE FILL OVAL
     private void drawEachStars(Graphics g, Stars i) {
         Color savedCol = g.getColor();
         g.setColor(Stars.COLOR);
-        g.fillOval(i.getX() - Stars.SIZE_X / 2, i.getY() - Stars.SIZE_Y / 2, Stars.SIZE_X, Stars.SIZE_Y);
+        g.fillRect(i.getX() - Stars.SIZE_X / 2, i.getY() - Stars.SIZE_Y / 2, Stars.SIZE_X, Stars.SIZE_Y);
         g.setColor(savedCol);
+    }
+
+    // Draws the "game over" message and replay instructions
+    // modifies: g
+    // effects:  draws "game over" and replay instructions onto g
+    private void gameOver(Graphics g) {
+        Color saved = g.getColor();
+        g.setColor(new Color( 0, 0, 0));
+        g.setFont(new Font("Arial", 20, 20));
+        FontMetrics fm = g.getFontMetrics();
+        centreString(OVER, g, fm, Game.HEIGHT / 2);
+        centreString(REPLAY, g, fm, Game.HEIGHT / 2 + 50);
+        g.setColor(saved);
+    }
+
+    // Centres a string on the screen
+    // modifies: g
+    // effects:  centres the string str horizontally onto g at vertical position yPos
+    private void centreString(String str, Graphics g, FontMetrics fm, int yPos) {
+        int width = fm.stringWidth(str);
+        g.drawString(str, (Game.WIDTH - width) / 2, yPos);
     }
 
 }

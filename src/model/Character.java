@@ -5,9 +5,11 @@ import java.awt.*;
 public class Character {
 
     // replace to character image
-    public static final int SIZE_X = 15;
-    public static final int SIZE_Y = 8;
+    public static final int SIZE_X = 30;
+    public static final int SIZE_Y = 50;
     public static final Color COLOR = new Color(250, 128, 20);
+    // todo: character shape
+    // how to embed the character into the rectangle
 
     public static final int DX = 2;
 
