@@ -1,6 +1,6 @@
 # flying_moon
 
-#This is a personal project made by Elisa Hu and Luna Liu. Flying to the moon is a mini GUI(Swing) game made with Java. The player controls the character with mouse. When the character collide with a star, he will jump upwards. If he falls out of the screen, game is over.
+#This is a personal project made by **Elisa Hu & Luna Liu** . Flying to the moon is a mini GUI(Swing) game made with Java. The player controls the character moving horixontally with mouse. When the character collide with a star, he will jump upwards. If he falls out of the screen, game is over.
 
 
 
